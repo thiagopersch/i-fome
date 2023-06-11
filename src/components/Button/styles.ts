@@ -13,19 +13,19 @@ export type WrapperProps = {
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
-    height: 3rem;
-    font-size: ${theme.font.sizes.small};
-    font-weight: ${theme.font.weight.bold};
+    height: 2rem;
+    font-size: ${theme.font.sizes.xxsmall};
+    padding: ${theme.spacings.small};
   `,
   medium: (theme: DefaultTheme) => css`
-    height: 4rem;
+    height: 6rem;
     font-size: ${theme.font.sizes.small};
-    padding: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.small};
   `,
   large: (theme: DefaultTheme) => css`
-    height: 5rem;
-    font-size: ${theme.font.sizes.medium};
-    padding: ${theme.spacings.xxsmall};
+    height: 8rem;
+    font-size: ${theme.font.sizes.large};
+    padding: ${theme.spacings.small};
   `,
   fullWidth: () => css`
     width: 100%;
@@ -47,7 +47,7 @@ const wrapperModifiers = {
     }
   `,
   normal: (theme: DefaultTheme) => css`
-    width: 20rem;
+    width: auto;
   `,
   rounded: () => css`
     border-radius: 10rem;
@@ -135,7 +135,7 @@ export const Wrapper = styled.button<WrapperProps>`
     hasIcon,
     disabled,
     styleType,
-    color = "darkGrey",
+    color = "primary",
     labelColor = "darkGrey",
     sizeLabel,
   }) => css`
